@@ -38,10 +38,10 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: LANG2, h: SCROLL}
-  - {t: LANG1, h: ARROW}
+  - {t: '&ng_off', h: '&lt 7'}
+  - {t: LANG1, h: FUNCTION}
   - {t: SPACE, h: NUM}
-  - {t: ENTER, h: FUNCTION}
+  - {t: ENTER, h: ARROW}
   - BACKSPACE
   - ESCAPE
   classic:
@@ -149,7 +149,7 @@ layers:
   - KP 6
   - '-'
   - {t: ▽, type: trans}
-  - Alt+TAB
+  - {t: ▽, type: trans}
   - '!'
   - '?'
   - '&'
@@ -176,6 +176,50 @@ layers:
   - {t: ▽, type: trans}
   - DELETE
   - ^
+  ARROW:
+  - ESCAPE
+  - Ctl+Sft+TAB
+  - UP ARROW
+  - Ctl+TAB
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - UP ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - END
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - HOME
+  - LEFT ARROW
+  - DOWN ARROW
+  - RIGHT ARROW
+  - END
+  - LEFT SHIFT
+  - Gui+Sft+LEFT ARROW
+  - {t: ▽, type: trans}
+  - Gui+Sft+RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   FUNCTION:
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
@@ -209,50 +253,6 @@ layers:
   - F11
   - F12
   - F13
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - ''
-  - {t: ▽, type: trans}
-  ARROW:
-  - ESCAPE
-  - Ctl+Sft+TAB
-  - UP ARROW
-  - Ctl+TAB
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - HOME
-  - LEFT ARROW
-  - DOWN ARROW
-  - RIGHT ARROW
-  - END
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - LEFT SHIFT
-  - Gui+Sft+LEFT ARROW
-  - {t: ▽, type: trans}
-  - Gui+Sft+RIGHT ARROW
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -346,7 +346,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
