@@ -6,6 +6,8 @@ manifest:
       url-base: https://github.com/kumamuk-git
     - name: kot149
       url-base: https://github.com/kot149
+    - name: eswai
+      url-base: https://github.com/eswai
     - name: kloir-z
       url-base: https://github.com/kloir-z
   projects:
@@ -21,5 +23,8 @@ manifest:
     - name: zmk-layout-shift
       remote: kot149
       revision: v1
+    - name: zmk-naginata
+      remote: eswai
+      revision: main
   self:
     path: config
