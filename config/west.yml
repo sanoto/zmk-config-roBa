@@ -4,6 +4,8 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    - name: kot149
+      url-base: https://github.com/kot149
     - name: kloir-z
       url-base: https://github.com/kloir-z
   projects:
@@ -16,5 +18,8 @@ manifest:
 #      revision: main
       remote: kloir-z
       revision: scroll-acceleration-feature
+    - name: zmk-layout-shift
+      remote: kot149
+      revision: v1
   self:
     path: config
