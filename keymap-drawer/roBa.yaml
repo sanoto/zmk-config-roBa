@@ -38,11 +38,11 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: LANG2, h: '6'}
+  - {t: LANG2, h: SCROLL}
   - {t: LANG1, h: ARROW}
   - {t: SPACE, h: NUM}
-  - {t: ENTER, h: NUM}
-  - {t: BACKSPACE, h: FUNCTION}
+  - {t: ENTER, h: FUNCTION}
+  - BACKSPACE
   - ESCAPE
   classic:
   - Q
@@ -79,6 +79,50 @@ layers:
   - ','
   - .
   - ''''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  naginata:
+  - '&ng Q'
+  - '&ng W'
+  - '&ng E'
+  - '&ng R'
+  - '&ng T'
+  - '&ng Y'
+  - '&ng U'
+  - '&ng I'
+  - '&ng O'
+  - '&ng P'
+  - '&ng A'
+  - '&ng S'
+  - '&ng D'
+  - '&ng F'
+  - '&ng G'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&ng H'
+  - '&ng J'
+  - '&ng K'
+  - '&ng L'
+  - '&ng SEMI'
+  - '&ng Z'
+  - '&ng X'
+  - '&ng C'
+  - '&ng V'
+  - '&ng B'
+  - '&ng SPACE'
+  - '&ng ENTER'
+  - '&ng N'
+  - '&ng M'
+  - '&ng COMMA'
+  - '&ng DOT'
+  - '&ng FSLH'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,14 +174,14 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - DELETE
   - ^
   FUNCTION:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
   - F1
   - F2
   - F3
@@ -148,7 +192,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - BT CLR
   - {t: ▽, type: trans}
   - F6
   - F7
@@ -173,8 +217,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - ''
   - {t: ▽, type: trans}
   ARROW:
   - ESCAPE
@@ -302,57 +346,19 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  '6':
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '1'
-  - '2'
-  - '3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&bootloader'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - BT CLR
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - BT CLR ALL
+  - {t: ▽, type: trans}
 combos:
-- p: [13, 18]
+- p: [37, 38]
   k: {t: classic, h: toggle}
   l: [default, classic]
+- p: [18, 19]
+  k: '&ng_on'
+  l: [default, classic, naginata]
+- p: [13, 12]
+  k: '&ng_off'
+  l: [default, classic, naginata]
