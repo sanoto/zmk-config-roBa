@@ -38,8 +38,8 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&ng_off', h: '&lt 7'}
-  - {t: LANG1, h: FUNCTION}
+  - {t: LANGUAGE 1, h: SCROLL}
+  - {t: '&ng_off', h: '&lt 5'}
   - {t: SPACE, h: NUM}
   - {t: ENTER, h: ARROW}
   - BACKSPACE
@@ -259,7 +259,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {type: held}
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -346,7 +346,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
