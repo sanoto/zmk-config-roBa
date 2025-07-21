@@ -129,6 +129,15 @@
 
             tap-ms = <20>;
         };
+
+        lt_ng_off: lt_ng_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_NG_OFF";
+            bindings = <&lt>, <&ng_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
