@@ -38,7 +38,7 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - '&lt_ng_off 7 0'
+  - {t: '&ng_off', h: '&lt 7'}
   - {t: LANG1, h: FUNCTION}
   - {t: SPACE, h: NUM}
   - {t: ENTER, h: ARROW}
