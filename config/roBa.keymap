@@ -1,10 +1,12 @@
 #include <input/processors.dtsi>
-#include <layout_shift.dtsi>
 #include <behaviors/naginata.dtsi>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
+// #include <layout_shift.dtsi>
+#include <layout_shift_kp_override.dtsi>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
@@ -126,33 +128,6 @@
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
 
             tap-ms = <20>;
-        };
-
-        // Keep the original key_press behavior for ZMK core components
-        // https://github.com/kot149/zmk-layout-shift
-
-        original_key_press: original_key_press {
-            compatible = "zmk,behavior-key-press";
-            #binding-cells = <1>;
-            label = "KEY_PRESS";
-        };
-
-        // Override the existing &kp behavior to use our custom implementation
-        // https://github.com/kot149/zmk-layout-shift
-
-        kp: key_press {
-            compatible = "zmk,behavior-layout-shift-key-press";
-            #binding-cells = <1>;
-            label = "LAYOUT_SHIFT_KEY_PRESS";
-        };
-
-        lt_ng_off: lt_ng_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_NG_OFF";
-            bindings = <&lt>, <&ng_off>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
     };
 
