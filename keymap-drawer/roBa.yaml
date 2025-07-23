@@ -39,7 +39,7 @@ layers:
   - LEFT WIN
   - LEFT ALT
   - {t: LANGUAGE 1, h: FUNCTION}
-  - {t: '&ng_off', h: '&lt 5'}
+  - {t: '&tog_off', h: '&lt 5'}
   - {t: SPACE, h: NUM}
   - {t: ENTER, h: ARROW}
   - BACKSPACE
