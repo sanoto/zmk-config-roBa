@@ -322,10 +322,10 @@ path.combo {
 <text x="0" y="24" class="key hold"><tspan style="font-size: 78%">RIGHT ALT</tspan></text>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="226" y="215" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="364" y="234" width="28" height="26" class="combo"/>
 <a href="#classic">
-<text x="240" y="228" class="combo tap layer-activator">classic</text>
-</a><text x="240" y="239" class="combo hold">toggle</text>
+<text x="378" y="247" class="combo tap layer-activator">classic</text>
+</a><text x="378" y="258" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="574" y="75" width="28" height="26" class="combo"/>
@@ -513,10 +513,10 @@ path.combo {
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<rect rx="6" ry="6" x="226" y="215" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="364" y="234" width="28" height="26" class="combo"/>
 <a href="#classic">
-<text x="240" y="228" class="combo tap layer-activator">classic</text>
-</a><text x="240" y="239" class="combo hold">toggle</text>
+<text x="378" y="247" class="combo tap layer-activator">classic</text>
+</a><text x="378" y="258" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
 <rect rx="6" ry="6" x="574" y="75" width="28" height="26" class="combo"/>
@@ -1488,13 +1488,17 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(333, 247) rotate(20.0)" class="key trans keypos-39">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(333, 247) rotate(20.0)" class="key keypos-39">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em" style="font-size: 70%">&amp;mouse_off</tspan><tspan x="0" dy="1.2em" style="font-size: 70%">LANGUAGE_2</tspan>
+</text>
 </g>
-<g transform="translate(423, 247) rotate(-20.0)" class="key trans keypos-40">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(423, 247) rotate(-20.0)" class="key keypos-40">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="0" class="key tap">
+<tspan x="0" dy="-0.6em" style="font-size: 70%">&amp;mouse_off</tspan><tspan x="0" dy="1.2em" style="font-size: 70%">LANGUAGE_1</tspan>
+</text>
 </g>
 <g transform="translate(485, 230) rotate(-10.0)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>

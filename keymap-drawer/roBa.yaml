@@ -304,8 +304,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mouse_off LANGUAGE_2'
+  - '&mouse_off LANGUAGE_1'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   BLUETOOTH:
@@ -353,7 +353,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
 combos:
-- p: [37, 38]
+- p: [39, 40]
   k: {t: classic, h: toggle}
   l: [default, classic]
 - p: [18, 19]
