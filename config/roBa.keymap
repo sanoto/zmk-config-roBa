@@ -31,8 +31,7 @@
 
 &trackball {
     //    automouse-layer = <6>;
-
-    scroll-layers = <7>;
+    //    scroll-layers = <7>;
 
     // arrows {
     //     layers = <3>;
@@ -47,9 +46,9 @@
     // };
 };
 
-&trackball_listener { input-processors = <&zip_temp_layer 6 100000>; };
+&trackball_listener { input-processors = <&zip_temp_layer 9 100000>; };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 6 250>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 9 100000>; };
 
 / {
     combos {
