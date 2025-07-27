@@ -32,7 +32,6 @@
 &trackball {
     //    automouse-layer = <6>;
     //    scroll-layers = <7>;
-
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -119,6 +118,22 @@
 
             label = "NG_OFF";
         };
+
+        mouse_off_ng_on: mouse_off_ng_on {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog_off 9 &tog_on 3 &kp LANGUAGE_1>;
+
+            label = "MOUSE_OFF_NG_ON";
+        };
+
+        mouse_off_ng_off: mouse_off_ng_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&tog_off 9 &tog_off 3 &kp LANGUAGE_2>;
+
+            label = "MOUSE_OFF_NG_OFF";
+        };
     };
 
     behaviors {
@@ -185,6 +200,34 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lt_quick: lt_quick {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_QUICK";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+        };
+
+        lt_mouse_off_ng_on: lt_mouse_off_ng_on {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_MOUSE_OFF_NG_ON";
+            bindings = <&mo>, <&mouse_off_ng_on>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_mouse_off_ng_off: lt_mouse_off_ng_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_MOUSE_OFF_NG_OFF";
+            bindings = <&mo>, <&mouse_off_ng_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -192,10 +235,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp L         &kp U         &kp COMMA        &kp DOT                                                    &kp F                  &kp W  &kp R  &kp Y  &kp P
-&kp E      &kp I         &kp A         &kp O            &kp MINUS             &kp LS(LG(S))       &kp ESCAPE       &kp K                  &kp T  &kp N  &kp S  &kp H
-&kp Z      &kp X         &kp C         &kp V            &kp APOS              &lt 8 TAB           &mt RCTRL SLASH  &kp G                  &kp D  &kp M  &kp J  &kp B
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt_ng_off 5 0      &lt_ng_on 6 0    &mt RIGHT_SHIFT ENTER                       &mt RIGHT_ALT BACKSLASH
+&kp Q      &kp L         &kp U         &kp COMMA              &kp DOT                                                    &kp F                  &kp W  &kp R  &kp Y  &kp P
+&kp E      &kp I         &kp A         &kp O                  &kp MINUS             &kp LS(LG(S))       &kp ESCAPE       &kp K                  &kp T  &kp N  &kp S  &kp H
+&kp Z      &kp X         &kp C         &kp V                  &kp APOS              &lt 8 TAB           &mt RCTRL SLASH  &kp G                  &kp D  &kp M  &kp J  &kp B
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_quick 7 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt_ng_off 5 0      &lt_ng_on 6 0    &mt RIGHT_SHIFT ENTER                       &mt RIGHT_ALT BACKSLASH
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -285,10 +328,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans                 &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans                 &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &mouse_off LANGUAGE_2      &mouse_off LANGUAGE_1  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                                                         &msc SCRL_UP    &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans                   &msc SCRL_LEFT  &mkp MB1  &mkp MB3  &mkp MB2  &msc SCRL_RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans                        &trans                   &msc SCRL_DOWN  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &lt_mouse_off_ng_off 5 0      &lt_mouse_off_ng_on 6 0  &trans                                        &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
