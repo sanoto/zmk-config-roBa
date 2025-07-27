@@ -204,8 +204,8 @@ layers:
   - '&ng C'
   - '&ng V'
   - '&ng B'
-  - '&ng SPACE'
-  - '&ng ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '&ng N'
   - '&ng M'
   - '&ng COMMA'
@@ -215,10 +215,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - '&ng SPACE'
   - {t: ▽, type: trans}
-  - {t: '&ng_off', h: NUM}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&ng ENTER'
   - {t: ▽, type: trans}
   NUM:
   - '%'
