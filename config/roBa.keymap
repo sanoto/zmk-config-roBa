@@ -61,16 +61,16 @@
             layers = <0 1>;
         };
 
-        ng_on {
-            bindings = <&ng_on>;
+        ng_activate {
+            bindings = <&ng_activate>;
             key-positions = <18 19>;
-            layers = <0 1 2>;
+            layers = <0 1 4 2 3>;
         };
 
-        ng_off {
-            bindings = <&ng_off>;
+        ng_deactivate {
+            bindings = <&ng_deactivate>;
             key-positions = <13 12>;
-            layers = <0 1 2>;
+            layers = <0 1 4 2 3>;
         };
     };
 
@@ -82,25 +82,39 @@
             label = "TO_LAYER_0";
         };
 
+        ng_activate: ng_activate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_on 2 &tog_on 3 &kp LANGUAGE_1>;
+            label = "NG_ACTIVATE";
+        };
+
+        ng_deactivate: ng_deactivate {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog_off 3 &tog_off 2 &kp LANGUAGE_2>;
+            label = "NG_DEACTIVATE";
+        };
+
+        mouse_off: mouse_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&tog_off 9 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "MOUSE_OFF";
+        };
+
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_on 2 &kp LANGUAGE_1>;
+            bindings = <&tog_on 3 &kp LANGUAGE_1>;
             label = "NG_ON";
         };
 
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_off 2 &kp LANGUAGE_2>;
+            bindings = <&tog_off 3 &kp LANGUAGE_2>;
             label = "NG_OFF";
-        };
-
-        mouse_off: mouse_off {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&tog_off 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOUSE_OFF";
         };
     };
 
@@ -154,7 +168,16 @@
         lt_ng_off: lt_ng_off {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_NG_OFF";
-            bindings = <&lt>, <&tog_off>;
+            bindings = <&mo>, <&ng_off>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        lt_ng_on: lt_ng_on {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_NG_ON";
+            bindings = <&mo>, <&ng_on>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -166,10 +189,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp L         &kp U         &kp COMMA        &kp DOT                                                       &kp F                  &kp W  &kp R  &kp Y  &kp P
-&kp E      &kp I         &kp A         &kp O            &kp MINUS             &kp LS(LG(S))         &kp ESCAPE        &kp K                  &kp T  &kp N  &kp S  &kp H
-&kp Z      &kp X         &kp C         &kp V            &kp APOS              &lt 7 TAB             &mt RCTRL SLASH   &kp G                  &kp D  &kp M  &kp J  &kp B
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 5 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt 3 LANGUAGE_2      &lt 4 LANGUAGE_1  &mt RIGHT_SHIFT ENTER                       &mt RIGHT_ALT BACKSLASH
+&kp Q      &kp L         &kp U         &kp COMMA        &kp DOT                                                    &kp F                  &kp W  &kp R  &kp Y  &kp P
+&kp E      &kp I         &kp A         &kp O            &kp MINUS             &kp LS(LG(S))       &kp ESCAPE       &kp K                  &kp T  &kp N  &kp S  &kp H
+&kp Z      &kp X         &kp C         &kp V            &kp APOS              &lt 8 TAB           &mt RCTRL SLASH  &kp G                  &kp D  &kp M  &kp J  &kp B
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 7 BACKSPACE  &mt LEFT_SHIFT SPACE  &lt_ng_off 5 0      &lt_ng_on 6 0    &mt RIGHT_SHIFT ENTER                       &mt RIGHT_ALT BACKSLASH
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -186,12 +209,30 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
+        naginata_activation_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
+        naginata_on_off_layer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+            >;
+        };
+
         naginata_layer {
             bindings = <
-&ng Q   &ng W   &ng E   &ng R   &ng T                             &ng Y   &ng U  &ng I      &ng O    &ng P
-&ng A   &ng S   &ng D   &ng F   &ng G   &trans         &trans     &ng H   &ng J  &ng K      &ng L    &ng SEMI
-&ng Z   &ng X   &ng C   &ng V   &ng B   &ng SPACE      &ng ENTER  &ng N   &ng M  &ng COMMA  &ng DOT  &ng FSLH
-&trans  &trans  &trans  &trans  &trans  &trans         &trans     &trans                             &trans
+&ng Q   &ng W   &ng E   &ng R   &ng T                                  &ng Y   &ng U  &ng I      &ng O    &ng P
+&ng A   &ng S   &ng D   &ng F   &ng G   &trans              &trans     &ng H   &ng J  &ng K      &ng L    &ng SEMI
+&ng Z   &ng X   &ng C   &ng V   &ng B   &ng SPACE           &ng ENTER  &ng N   &ng M  &ng COMMA  &ng DOT  &ng FSLH
+&trans  &trans  &trans  &trans  &trans  &lt_ng_off 5 0      &trans     &trans                             &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -230,6 +271,15 @@
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
+        BLUETOOTH {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &bt BT_CLR    &trans        &bt BT_CLR_ALL      &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &none               &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans              &trans  &trans                          &trans
+            >;
+        };
+
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                                    &trans  &trans    &trans    &trans    &trans
@@ -240,14 +290,14 @@
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
+    };
 
-        BLUETOOTH {
-            bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                              &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &bt BT_CLR    &trans        &bt BT_CLR_ALL      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &none               &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans        &trans              &trans  &trans                          &trans
-            >;
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        naginata {
+            if-layers = <2 3>;
+            then-layer = <4>;
         };
     };
 };
