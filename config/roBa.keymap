@@ -15,16 +15,16 @@
 };
 
 &zip_temp_layer {
-//    excluded-positions = <
-//        18 // T (J)
-//        19 // N (K)
-//        20 // S (L)
-//        27 // LShift / (
-//        28 // RShift / )
-//        34 // Ctrl
-//        35 // Win
-//        36 // Alt
-//    >;
+    //    excluded-positions = <
+    //        18 // T (J)
+    //        19 // N (K)
+    //        20 // S (L)
+    //        27 // LShift / (
+    //        28 // RShift / )
+    //        34 // Ctrl
+    //        35 // Win
+    //        36 // Alt
+    //    >;
 
     require-prior-idle-ms = <200>;
 };
@@ -85,14 +85,16 @@
         ng_activate: ng_activate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_on 2 &tog_on 3 &kp LANGUAGE_1>;
+            bindings = <&macro_tap>, <&tog_on 2 &tog_on 3 &kp LANGUAGE_1>;
+
             label = "NG_ACTIVATE";
         };
 
         ng_deactivate: ng_deactivate {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_off 3 &tog_off 2 &kp LANGUAGE_2>;
+            bindings = <&macro_tap>, <&tog_off 3 &tog_off 2 &kp LANGUAGE_2>;
+
             label = "NG_DEACTIVATE";
         };
 
@@ -106,14 +108,16 @@
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_on 3 &kp LANGUAGE_1>;
+            bindings = <&macro_tap>, <&tog_on 3 &kp LANGUAGE_1>;
+
             label = "NG_ON";
         };
 
         ng_off: ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog_off 3 &kp LANGUAGE_2>;
+            bindings = <&macro_tap>, <&tog_off 3 &kp LANGUAGE_2>;
+
             label = "NG_OFF";
         };
     };
