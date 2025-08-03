@@ -96,11 +96,11 @@
             label = "NG_DEACTIVATE";
         };
 
-        mouse_off: mouse_off {
+        m_off: m_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&tog_off 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOUSE_OFF";
+            label = "M_OFF";
         };
 
         ng_on: ng_on {
@@ -119,20 +119,20 @@
             label = "NG_OFF";
         };
 
-        mouse_off_ng_on: mouse_off_ng_on {
+        m_off_ng_on: m_off_ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog_off 5 &tog_on 3 &kp LANGUAGE_1>;
 
-            label = "MOUSE_OFF_NG_ON";
+            label = "M_OFF_NG_ON";
         };
 
-        mouse_off_ng_off: mouse_off_ng_off {
+        m_off_ng_off: m_off_ng_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap>, <&tog_off 5 &tog_off 3 &kp LANGUAGE_2>;
 
-            label = "MOUSE_OFF_NG_OFF";
+            label = "M_OFF_NG_OFF";
         };
     };
 
@@ -208,22 +208,22 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <150>;
+            quick-tap-ms = <300>;
         };
 
-        lt_mouse_off_ng_on: lt_mouse_off_ng_on {
+        lt_m_off_ng_on: lt_m_off_ng_on {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_MOUSE_OFF_NG_ON";
-            bindings = <&mo>, <&mouse_off_ng_on>;
+            label = "LT_M_OFF_NG_ON";
+            bindings = <&mo>, <&m_off_ng_on>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
 
-        lt_mouse_off_ng_off: lt_mouse_off_ng_off {
+        lt_m_off_ng_off: lt_m_off_ng_off {
             compatible = "zmk,behavior-hold-tap";
-            label = "LT_MOUSE_OFF_NG_OFF";
-            bindings = <&mo>, <&mouse_off_ng_off>;
+            label = "LT_M_OFF_NG_OFF";
+            bindings = <&mo>, <&m_off_ng_off>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -286,10 +286,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans                    &trans                                       &msc SCRL_UP    &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans                    &trans  &trans                       &trans  &msc SCRL_LEFT  &mkp MB1  &mkp MB3  &mkp MB2  &msc SCRL_RIGHT
-&trans  &trans  &trans  &trans                    &trans  &trans                       &trans  &msc SCRL_DOWN  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &lt_mouse_off_ng_off 8 0  &trans  &lt_mouse_off_ng_on 6 0      &trans  &trans                                        &trans
+&trans  &trans  &trans  &trans  &trans                      &msc SCRL_UP    &none     &none     &none            &none
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &msc SCRL_LEFT  &mkp MB1  &mkp MB2  &msc SCRL_RIGHT  &none
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &msc SCRL_DOWN  &none     &none     &none            &none
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                               &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -297,10 +297,10 @@
 
         NUM {
             bindings = <
-&kp PERCENT  &kp N7  &kp N8  &kp N9  &kp PLUS                                      &kp COLON       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON    &kp AT_SIGN
-&kp EQUAL    &kp N4  &kp N5  &kp N6  &kp ASTERISK  &trans              &kp TILDE   &kp AMPERSAND   &kp EXCLAMATION       &kp QUESTION           &kp PIPE         &kp HASH
-&kp N0       &kp N1  &kp N2  &kp N3  &kp GRAVE     &kp LEFT_SHIFT      &kp DELETE  &kp LEFT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp RIGHT_BRACE  &kp DOLLAR
-&trans       &trans  &trans  &trans  &trans        &none               &trans      &trans                                                                        &kp CARET
+&kp PERCENT  &kp N7  &kp N8  &kp N9  &kp PLUS                                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp PIPE         &kp AT_SIGN
+&kp EQUAL    &kp N4  &kp N5  &kp N6  &kp ASTERISK  &trans              &kp TILDE        &kp EXCLAMATION       &kp QUESTION           &kp COLON       &kp SEMICOLON    &kp HASH
+&kp N0       &kp N1  &kp N2  &kp N3  &kp GRAVE     &kp LEFT_SHIFT      &kp RIGHT_SHIFT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR
+&trans       &trans  &trans  &trans  &trans        &none               &kp DELETE       &trans                                                                        &kp CARET
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
