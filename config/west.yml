@@ -20,9 +20,9 @@ manifest:
 #      revision: main
       remote: kloir-z
       revision: scroll-acceleration-feature
-#    - name: zmk-layout-shift
-#      remote: kot149
-#      revision: v1
+    - name: zmk-layout-shift
+      remote: kot149
+      revision: v1
     - name: zmk-naginata
       remote: eswai
       revision: main

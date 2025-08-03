@@ -1,5 +1,4 @@
-//#include <layout_shift.dtsi>
-
+#include <layout_shift.dtsi>
 #include <input/processors.dtsi>
 #include <behaviors/naginata.dtsi>
 #include <behaviors.dtsi>
@@ -15,16 +14,27 @@
 };
 
 &zip_temp_layer {
-    //    excluded-positions = <
-    //        18 // T (J)
-    //        19 // N (K)
-    //        20 // S (L)
-    //        27 // LShift / (
-    //        28 // RShift / )
-    //        34 // Ctrl
-    //        35 // Win
-    //        36 // Alt
-    //    >;
+    excluded-positions = <
+        5 // F (Y)
+        6 // W (U)
+        7 // R (I)
+        8 // Y (O)
+        9 // P (P)
+        17 // K (H)
+        18 // T (J)
+        19 // N (K)
+        20 // S (L)
+        21 // H (-)
+        29 // G (N)
+        30 // D (M)
+        31 // M (,)
+        32 // J (.)
+        33 // B (')
+        34 // Ctrl
+        35 // Win
+        36 // Alt
+        38 // LShift / Space
+    >;
 
     require-prior-idle-ms = <200>;
 };
@@ -45,9 +55,9 @@
     // };
 };
 
-&trackball_listener { input-processors = <&zip_temp_layer 9 100000>; };
+&trackball_listener { input-processors = <&zip_temp_layer 5 100000>; };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 9 100000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 5 100000>; };
 
 / {
     combos {
@@ -139,18 +149,18 @@
     behaviors {
         // Keep the original key_press behavior for ZMK core components
         // https://github.com/kot149/zmk-layout-shift
-        //        original_key_press: original_key_press {
-        //            compatible = "zmk,behavior-key-press";
-        //            #binding-cells = <1>;
-        //            label = "KEY_PRESS";
-        //        };
+        original_key_press: original_key_press {
+            compatible = "zmk,behavior-key-press";
+            #binding-cells = <1>;
+            label = "KEY_PRESS";
+        };
         // Override the existing &kp behavior to use our custom implementation
         // https://github.com/kot149/zmk-layout-shift
-        //        kp: key_press {
-        //            compatible = "zmk,behavior-layout-shift-key-press";
-        //            #binding-cells = <1>;
-        //            label = "LAYOUT_SHIFT_KEY_PRESS";
-        //        };
+        kp: key_press {
+            compatible = "zmk,behavior-layout-shift-key-press";
+            #binding-cells = <1>;
+            label = "LAYOUT_SHIFT_KEY_PRESS";
+        };
 
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
