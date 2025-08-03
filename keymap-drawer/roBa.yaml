@@ -227,10 +227,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&msc SCRL_UP'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -240,9 +240,9 @@ layers:
   - {t: ▽, type: trans}
   - '&msc SCRL_LEFT'
   - '&mkp MB1'
-  - '&mkp MB3'
   - '&mkp MB2'
   - '&msc SCRL_RIGHT'
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -251,16 +251,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&msc SCRL_DOWN'
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '&mouse_off_ng_off', h: FUNCTION}
-  - {t: ▽, type: trans}
-  - {t: '&mouse_off_ng_on', h: NUM}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -270,10 +270,10 @@ layers:
   - '8'
   - '9'
   - +
-  - ':'
   - (
   - )
-  - ;
+  - '&'
+  - '|'
   - '@'
   - '='
   - '4'
@@ -282,10 +282,10 @@ layers:
   - '*'
   - {t: ▽, type: trans}
   - '~'
-  - '&'
   - '!'
   - '?'
-  - '|'
+  - ':'
+  - ;
   - '#'
   - '0'
   - '1'
@@ -293,10 +293,10 @@ layers:
   - '3'
   - '`'
   - LEFT SHIFT
-  - DELETE
-  - '{'
+  - RIGHT SHIFT
   - '['
   - ']'
+  - '{'
   - '}'
   - $
   - {t: ▽, type: trans}
@@ -305,7 +305,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
+  - DELETE
   - {t: ▽, type: trans}
   - ^
   ARROW:
