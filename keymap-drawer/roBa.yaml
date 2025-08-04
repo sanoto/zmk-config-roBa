@@ -38,9 +38,9 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&ng_off', h: FUNCTION}
+  - {t: '&ng_on', h: FUNCTION}
   - {t: SPACE, h: LEFT SHIFT}
-  - {t: '&ng_on', h: NUM}
+  - {t: '&ng_off', h: NUM}
   - {t: BACKSPACE, h: ARROW}
   - {t: ENTER, h: RIGHT SHIFT}
   - {t: \, h: RIGHT ALT}

@@ -286,7 +286,7 @@ path.combo {
 </g>
 <g transform="translate(208, 225)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">&amp;ng_off</text>
+<text x="0" y="0" class="key tap">&amp;ng_on</text>
 <a href="#FUNCTION">
 <text x="0" y="24" class="key hold layer-activator"><tspan style="font-size: 88%">FUNCTION</tspan></text>
 </a></g>
@@ -297,7 +297,7 @@ path.combo {
 </g>
 <g transform="translate(333, 247) rotate(20.0)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<text x="0" y="0" class="key tap">&amp;ng_on</text>
+<text x="0" y="0" class="key tap">&amp;ng_off</text>
 <a href="#NUM">
 <text x="0" y="24" class="key hold layer-activator">NUM</text>
 </a></g>
