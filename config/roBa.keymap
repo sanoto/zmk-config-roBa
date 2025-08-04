@@ -106,13 +106,6 @@
             label = "NG_DEACTIVATE";
         };
 
-        m_off: m_off {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&tog_off 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "M_OFF";
-        };
-
         ng_on: ng_on {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -128,34 +121,21 @@
 
             label = "NG_OFF";
         };
-
-        m_off_ng_on: m_off_ng_on {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog_off 5 &tog_on 3 &kp LANGUAGE_1>;
-
-            label = "M_OFF_NG_ON";
-        };
-
-        m_off_ng_off: m_off_ng_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap>, <&tog_off 5 &tog_off 3 &kp LANGUAGE_2>;
-
-            label = "M_OFF_NG_OFF";
-        };
     };
 
     behaviors {
         // Keep the original key_press behavior for ZMK core components
         // https://github.com/kot149/zmk-layout-shift
+
         original_key_press: original_key_press {
             compatible = "zmk,behavior-key-press";
             #binding-cells = <1>;
             label = "KEY_PRESS";
         };
+
         // Override the existing &kp behavior to use our custom implementation
         // https://github.com/kot149/zmk-layout-shift
+
         kp: key_press {
             compatible = "zmk,behavior-layout-shift-key-press";
             #binding-cells = <1>;
@@ -220,24 +200,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <300>;
         };
-
-        lt_m_off_ng_on: lt_m_off_ng_on {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_M_OFF_NG_ON";
-            bindings = <&mo>, <&m_off_ng_on>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        lt_m_off_ng_off: lt_m_off_ng_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT_M_OFF_NG_OFF";
-            bindings = <&mo>, <&m_off_ng_off>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
     };
 
     keymap {
@@ -245,10 +207,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp L         &kp U         &kp COMMA       &kp DOT                                                         &kp F                  &kp W  &kp R  &kp Y  &kp P
-&kp E      &kp I         &kp A         &kp O           &kp MINUS             &kp LS(LG(S))      &kp ESCAPE             &kp K                  &kp T  &kp N  &kp S  &kp H
-&kp Z      &kp X         &kp C         &kp V           &kp APOS              &lt 9 TAB          &mt RCTRL SLASH        &kp G                  &kp D  &kp M  &kp J  &kp B
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_ng_off 8 0  &mt LEFT_SHIFT SPACE  &lt_ng_on 6 0      &lt_quick 7 BACKSPACE  &mt RIGHT_SHIFT ENTER                       &mt RIGHT_ALT BACKSLASH
+&kp Q      &kp L         &kp U         &kp COMMA      &kp DOT                                                          &kp F                  &kp W  &kp R  &kp Y  &kp P
+&kp E      &kp I         &kp A         &kp O          &kp MINUS             &kp LS(LG(S))       &kp ESCAPE             &kp K                  &kp T  &kp N  &kp S  &kp H
+&kp Z      &kp X         &kp C         &kp V          &kp APOS              &lt 9 TAB           &mt RCTRL SLASH        &kp G                  &kp D  &kp M  &kp J  &kp B
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_ng_on 8 0  &mt LEFT_SHIFT SPACE  &lt_ng_off 6 0      &lt_quick 7 BACKSPACE  &mt RIGHT_SHIFT ENTER                       &mt RIGHT_ALT BACKSLASH
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
