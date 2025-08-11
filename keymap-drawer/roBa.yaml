@@ -270,35 +270,35 @@ layers:
   - '8'
   - '9'
   - +
-  - (
-  - )
+  - $
   - '&'
   - '|'
-  - '@'
+  - '{'
+  - '}'
   - '='
   - '4'
   - '5'
   - '6'
   - '*'
   - {t: ▽, type: trans}
-  - '~'
+  - '`'
+  - '@'
   - '!'
   - '?'
-  - ':'
-  - ;
-  - '#'
+  - (
+  - )
   - '0'
   - '1'
   - '2'
   - '3'
-  - '`'
+  - ^
   - LEFT SHIFT
   - RIGHT SHIFT
+  - '#'
+  - ':'
+  - ;
   - '['
   - ']'
-  - '{'
-  - '}'
-  - $
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -307,7 +307,7 @@ layers:
   - {type: held}
   - DELETE
   - {t: ▽, type: trans}
-  - ^
+  - '~'
   ARROW:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
