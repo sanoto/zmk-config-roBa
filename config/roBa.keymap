@@ -269,10 +269,10 @@
 
         NUM {
             bindings = <
-&kp PERCENT  &kp N7  &kp N8  &kp N9  &kp PLUS                                           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPERSAND   &kp PIPE         &kp AT_SIGN
-&kp EQUAL    &kp N4  &kp N5  &kp N6  &kp ASTERISK  &trans              &kp TILDE        &kp EXCLAMATION       &kp QUESTION           &kp COLON       &kp SEMICOLON    &kp HASH
-&kp N0       &kp N1  &kp N2  &kp N3  &kp GRAVE     &kp LEFT_SHIFT      &kp RIGHT_SHIFT  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp DOLLAR
-&trans       &trans  &trans  &trans  &trans        &none               &kp DELETE       &trans                                                                        &kp CARET
+&kp PERCENT  &kp N7  &kp N8  &kp N9  &kp PLUS                                           &kp DOLLAR   &kp AMPERSAND    &kp PIPE       &kp LEFT_BRACE        &kp RIGHT_BRACE
+&kp EQUAL    &kp N4  &kp N5  &kp N6  &kp ASTERISK  &trans              &kp GRAVE        &kp AT_SIGN  &kp EXCLAMATION  &kp QUESTION   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp N0       &kp N1  &kp N2  &kp N3  &kp CARET     &kp LEFT_SHIFT      &kp RIGHT_SHIFT  &kp HASH     &kp COLON        &kp SEMICOLON  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans       &trans  &trans  &trans  &trans        &none               &kp DELETE       &trans                                                             &kp TILDE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
