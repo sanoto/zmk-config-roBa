@@ -125,14 +125,14 @@
         ls_on_bt_sel: ls_on_bt_sel {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&none &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
+            bindings = <&tog_ls_on &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "LS_ON_BT_SEL";
         };
 
         ls_off_bt_sel: ls_off_bt_sel {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&none &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
+            bindings = <&tog_ls_off &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "LS_OFF_BT_SEL";
         };
     };
@@ -316,10 +316,10 @@
 
         BLUETOOTH {
             bindings = <
-&ls_on_bt_sel 0  &ls_off_bt_sel 1  &ls_on_bt_sel 2  &ls_on_bt_sel 3  &ls_on_bt_sel 4                              &trans  &trans      &trans       &trans  &trans
-&trans           &trans            &trans           &bt BT_CLR       &trans           &bt BT_CLR_ALL      &trans  &trans  &tog_ls_on  &tog_ls_off  &trans  &trans
-&trans           &trans            &trans           &trans           &trans           &none               &trans  &trans  &trans      &trans       &trans  &trans
-&trans           &trans            &trans           &trans           &trans           &trans              &trans  &trans                                   &trans
+&ls_on_bt_sel 0  &ls_off_bt_sel 1  &ls_on_bt_sel 2  &ls_on_bt_sel 3  &ls_on_bt_sel 4                              &tog_ls_on   &trans  &trans  &trans  &trans
+&trans           &trans            &trans           &bt BT_CLR       &trans           &bt BT_CLR_ALL      &trans  &tog_ls_off  &trans  &trans  &trans  &trans
+&trans           &trans            &trans           &trans           &trans           &none               &trans  &trans       &trans  &trans  &trans  &trans
+&trans           &trans            &trans           &trans           &trans           &trans              &trans  &trans                               &trans
             >;
         };
     };
