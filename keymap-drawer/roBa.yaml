@@ -397,11 +397,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   BLUETOOTH:
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
+  - '&ls_on_bt_sel'
+  - '&ls_off_bt_sel 1'
+  - '&ls_on_bt_sel 2'
+  - '&ls_on_bt_sel 3'
+  - '&ls_on_bt_sel 4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
