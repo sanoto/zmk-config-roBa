@@ -240,9 +240,9 @@ layers:
   - {t: ▽, type: trans}
   - '&msc SCRL_LEFT'
   - '&mkp MB1'
+  - '&mkp MB3'
   - '&mkp MB2'
   - '&msc SCRL_RIGHT'
-  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
