@@ -38,9 +38,9 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&ng_on', h: FUNCTION}
+  - {t: '&ng_off', h: FUNCTION}
   - {t: SPACE, h: LEFT SHIFT}
-  - {t: '&ng_off', h: NUM}
+  - {t: '&ng_on', h: NUM}
   - {t: BACKSPACE, h: ARROW}
   - {t: ENTER, h: RIGHT SHIFT}
   - {t: \, h: RIGHT ALT}
@@ -393,8 +393,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
   - {t: ▽, type: trans}
   BLUETOOTH:
   - '&ls_on_bt_sel'
