@@ -397,7 +397,7 @@ layers:
   - '&mkp MB5'
   - {t: ▽, type: trans}
   BLUETOOTH:
-  - '&ls_on_bt_sel'
+  - '&ls_off_bt_sel'
   - '&ls_off_bt_sel 1'
   - '&ls_on_bt_sel 2'
   - '&ls_on_bt_sel 3'
